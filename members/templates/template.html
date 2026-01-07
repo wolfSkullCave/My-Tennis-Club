@@ -1,0 +1,62 @@
+{% extends 'master.html' %}
+
+{% block title %}
+Test Template 
+{% endblock %}
+
+{% block content %} 
+<div class="container">
+
+  <table>
+    <tr>
+      <th>ID</th>
+      <th>Firstname</th>
+      <th>Lastname</th>
+    </tr>
+    {% for x in mymembers %}
+    <tr>
+      <td>{{ x.id }}</td>
+      <td>{{ x.firstname }}</td>
+      <td>{{ x.lastname }}</td>
+    </tr>
+    {% endfor %}
+  </table>
+
+  <h2>Get data</h2>
+  <p>
+  {% for x in mymembers %}
+    {{ x.firstname }}
+  {% endfor %}
+  </p>
+
+  <p>
+  {% for x in mymembers2 %}
+    {{ x.firstname }}
+    {% endfor %}
+  </p>
+
+  <h2>Order by</h2>
+  <h4> First names</h4>
+  <ul>
+  {% for x in names %}
+  <li> {{ x.firstname }}</li>
+  {% endfor %}
+  </ul>
+
+  <h4> First names (Reversed)</h4>
+  <ul>
+  {% for x in namesReverse %}
+  <li> {{ x.firstname }}</li>
+  {% endfor %}
+  </ul>
+
+  <h4> Multi Order Bys</h4>
+  <ul>
+  {% for x in multiOrderBy %}
+  <li> {{ x.firstname }}</li>
+  {% endfor %}
+  </ul>
+
+</div>
+{% endblock %}
+

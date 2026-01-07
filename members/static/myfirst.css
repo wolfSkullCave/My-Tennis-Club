@@ -1,0 +1,40 @@
+:root {
+  --content-padding: 1% 10%;
+  --section-margin: 1% 0;
+}
+
+.layout_1 {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+}
+
+.content .container {
+  margin: var(--section-margin);
+  padding: var(--content-padding);
+  background-color: lightgrey;
+  min-height: 400px;
+}
+
+.header,
+.footer {
+  padding: var(--content-padding);
+  background-color: grey;
+  color: white;
+}
+
+nav.navbar {
+  display: flex;
+  gap: 1rem;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: white;
+}
+
+.hero {
+  background-color: lightblue;
+  padding: var(--content-padding);
+  margin: var(--section-margin);
+}

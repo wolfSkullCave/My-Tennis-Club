@@ -1,0 +1,22 @@
+:root {
+  --content-padding: 1% 10%;
+}
+
+.layout_1 {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 5fr 1fr;
+}
+
+.content {
+  margin: 1rem 0;
+  padding: var(--content-padding);
+  display: grid;
+  background-color: lightgrey;
+}
+
+.header,
+.footer {
+  padding: var(--content-padding);
+  background-color: grey;
+}
